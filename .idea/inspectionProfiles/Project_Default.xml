@@ -1,0 +1,16 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="Test_practice.Unit_test_ex.calco.__sub__" />
+          <option value="Test_practice.Unit_test_ex.calco.__add__" />
+          <option value="Test_practice.Unit_test_ex.calco.__mul__" />
+          <option value="Test_practice.Unit_test_ex.calco.__truediv__" />
+          <option value="random.random.sample" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
