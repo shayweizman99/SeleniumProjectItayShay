@@ -48,26 +48,27 @@ class Products():
 
     def pop_up_info(self):
         self.loader_wait()
-        cart = self.driver.find_element_by_id("shoppingCartLink") #move with the mouse the shopping cart link
+        cart = self.driver.find_element_by_id("shoppingCartLink")  # move with the mouse the shopping cart link
         ActionChains(self.driver).move_to_element(cart).perform()
 
-        wait = WebDriverWait(self.driver , 10)
-        wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR,"table[ng-show='cart.productsInCart.length > 0']>tbody")))
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(EC.visibility_of_element_located(
+            (By.CSS_SELECTOR, "table[ng-show='cart.productsInCart.length > 0']>tbody")))
 
-        table = self.driver.find_element_by_css_selector("table[ng-show='cart.productsInCart.length > 0']>tbody") #finds the table
-        rows = table.find_elements_by_tag_name('tr') # find rows
+        table = self.driver.find_element_by_css_selector(
+            "table[ng-show='cart.productsInCart.length > 0']>tbody")  # finds the table
+        rows = table.find_elements_by_tag_name('tr')  # find rows
         products = []
         for row in rows:
             column = row.find_elements_by_tag_name('td')
             color = column[1].find_element_by_css_selector("span[class='ng-binding']").text
             price = column[2].find_element_by_tag_name('p').text
             price = price[1:]
-            price = price.replace(',' , '')
+            price = price.replace(',', '')
             price = float(price)
-            amount =column[1].find_element_by_tag_name('label').text.split()[1]
+            amount = column[1].find_element_by_tag_name('label').text.split()[1]
             amount = int(amount)
             name = column[1].find_element_by_tag_name('h3').text
             product = [name, amount, color, price]
             products.append(product)
         return products
-

@@ -49,7 +49,7 @@ class AOS_tests(unittest.TestCase):
         sleep(5)
         self.products.choose_speaker(2)
         sleep(5)
-        self.products.plus(4)
+        self.products.plus(3)
         self.products.change_color('blue')
         self.products.add_to_cart()
         self.driver.back()
@@ -64,26 +64,26 @@ class AOS_tests(unittest.TestCase):
         self.products.add_to_cart()
         print("----------------------")
         print("----------------------")
-    #     #כאן תכנס לולאה אשר תבדוק מחיר (כמות כפול מחיר בסיס),צבע,כמות ושם
-        self.assertIn(self.products.pop_up_info()[0][0],"HP ELITEPAD 1000 G2 TABLET")
-        self.assertEqual(self.products.pop_up_info()[0][1], 1)
-        self.assertEqual(self.products.pop_up_info()[0][2], 'GRAY')
-        # self.assertEqual(self.products.pop_up_info()[0][4], 1009.0)
+        # כאן תכנס לולאה אשר תבדוק מחיר (כמות כפול מחיר בסיס),צבע,כמות ושם
+        # self.assertEqual(self.products.pop_up_info()[0][0], "HP ELITEPAD 1000 G2 TABLET")  # WORKING
+        # self.assertEqual(self.products.pop_up_info()[0][1], 1)  # WORKING
+        # self.assertEqual(self.products.pop_up_info()[0][2], 'GRAY')  # WORKING
+        # self.assertEqual(self.products.pop_up_info()[0][3], 1009.0)  # WOKRING
+        #
+        # self.assertEqual(self.products.pop_up_info()[1][0], "BOSE SOUNDLINK BLUETOOTH SP...")  # WOKRING
+        # self.assertEqual(self.products.pop_up_info()[1][1], 2)  # WORKING
+        # self.assertEqual(self.products.pop_up_info()[1][2], 'BLACK')  # WOKRING
+        # self.assertEqual(self.products.pop_up_info()[1][3], 539.98)  # WORKING
+        #
+        # self.assertEqual(self.products.pop_up_info()[2][0], "BOSE SOUNDLINK WIRELESS SPE...")  # WOKRING
+        # self.assertEqual(self.products.pop_up_info()[2][1], 3)  # WORKING
+        # self.assertEqual(self.products.pop_up_info()[2][2], 'BLUE')  # WORKING
+        # self.assertEqual(self.products.pop_up_info()[2][3], 387.0)  # WORKING
 
-        self.assertEqual(self.products.pop_up_info()[1][0],"BOSE SOUNDLINK BLUETOOTH SP...")
-        self.assertEqual(self.products.pop_up_info()[1][1], 2)
-        self.assertEqual(self.products.pop_up_info()[1][2], 'BLACK')
-        # self.assertEqual(self.products.pop_up_info()[1][4], 269.99)
-
-        self.assertEqual(self.products.pop_up_info()[1][0],"BOSE SOUNDLINK BLUETOOTH SP...")
-        self.assertEqual(self.products.pop_up_info()[1][1], 4)
-        self.assertEqual(self.products.pop_up_info()[1][2], 'BLUE')
-        # self.assertEqual(self.products.pop_up_info()[1][4], 516.0)
-
-        # print(self.products.pop_up_info()[2][0], "1")
-        # print(self.products.pop_up_info()[2][1], "2")
-        # print(self.products.pop_up_info()[2][2], "3")
-        # print(self.products.pop_up_info()[2][3], "4")
+        # print(self.products.pop_up_info()[2][0], "NAME")
+        print(type(self.products.pop_up_info()[1][1]))
+        # print(self.products.pop_up_info()[2][2], "COLOR")
+        print(type(self.products.pop_up_info()[2][3]))
 
     # def test_3(self):
     #     pass

@@ -27,10 +27,6 @@ class MainPage():
         self.loader_wait()
         self.tablets().click()
 
-
-
-
-
     def home_button(self):
         return self.driver.find_element_by_xpath("//a[@class='ng-scope']")
 
