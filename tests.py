@@ -16,32 +16,32 @@ class AOS_tests(unittest.TestCase):
         print("setup")
         self.driver.implicitly_wait(10)
 
-    # def test_1(self):
-    #     sleep(5)
-    #     self.mainpage.click_speakers()
-    #     sleep(5)
-    #     self.products.choose_speaker(3)
-    #     self.products.plus(2)
-    #     self.products.change_color('yellow')
-    #     self.products.add_to_cart()
-    #     self.driver.back()
-    #     self.products.choose_speaker(1)
-    #     self.products.change_color('grey')
-    #     self.products.add_to_cart()
-    #     self.mainpage.home_navigate()
-    #     self.mainpage.click_tablets()
-    #     self.products.choose_tablet(3)
-    #     self.products.plus(3)
-    #     self.products.change_color('black')
-    #     self.products.add_to_cart()
-    #     amount = 0
-    #     for product in self.products.pop_up_info():
-    #         amount += product[1]
-    #
-    #     if 6 == amount:
-    #         assert True
-    #     else:
-    #         assert False
+    def test_1(self):
+        sleep(5)
+        self.mainpage.click_speakers()
+        sleep(5)
+        self.products.choose_speaker(3)
+        self.products.plus(2)
+        self.products.change_color('yellow')
+        self.products.add_to_cart()
+        self.driver.back()
+        self.products.choose_speaker(1)
+        self.products.change_color('grey')
+        self.products.add_to_cart()
+        self.mainpage.home_navigate()
+        self.mainpage.click_tablets()
+        self.products.choose_tablet(3)
+        self.products.plus(3)
+        self.products.change_color('black')
+        self.products.add_to_cart()
+        amount = 0
+        for product in self.products.pop_up_info():
+            amount += product[1]
+
+        if 6 == amount:
+            assert True
+        else:
+            assert False
 
     def test_2(self):
         sleep(5)
@@ -64,26 +64,27 @@ class AOS_tests(unittest.TestCase):
         self.products.add_to_cart()
         print("----------------------")
         print("----------------------")
+        prods_list = self.products.pop_up_info()
         # כאן תכנס לולאה אשר תבדוק מחיר (כמות כפול מחיר בסיס),צבע,כמות ושם
-        # self.assertEqual(self.products.pop_up_info()[0][0], "HP ELITEPAD 1000 G2 TABLET")  # WORKING
-        # self.assertEqual(self.products.pop_up_info()[0][1], 1)  # WORKING
-        # self.assertEqual(self.products.pop_up_info()[0][2], 'GRAY')  # WORKING
-        # self.assertEqual(self.products.pop_up_info()[0][3], 1009.0)  # WOKRING
-        #
-        # self.assertEqual(self.products.pop_up_info()[1][0], "BOSE SOUNDLINK BLUETOOTH SP...")  # WOKRING
-        # self.assertEqual(self.products.pop_up_info()[1][1], 2)  # WORKING
-        # self.assertEqual(self.products.pop_up_info()[1][2], 'BLACK')  # WOKRING
-        # self.assertEqual(self.products.pop_up_info()[1][3], 539.98)  # WORKING
-        #
-        # self.assertEqual(self.products.pop_up_info()[2][0], "BOSE SOUNDLINK WIRELESS SPE...")  # WOKRING
-        # self.assertEqual(self.products.pop_up_info()[2][1], 3)  # WORKING
-        # self.assertEqual(self.products.pop_up_info()[2][2], 'BLUE')  # WORKING
-        # self.assertEqual(self.products.pop_up_info()[2][3], 387.0)  # WORKING
+        self.assertEqual(prods_list[0][0], "HP ELITEPAD 1000 G2 TABLET")  # WORKING
+        self.assertEqual(prods_list[0][1], 1)  # WORKING
+        self.assertEqual(prods_list[0][2], 'GRAY')  # WORKING
+        self.assertEqual(prods_list[0][3], 1009.0)  # WOKRING
+
+        self.assertEqual(prods_list[1][0], "BOSE SOUNDLINK BLUETOOTH SP...")  # WOKRING
+        self.assertEqual(prods_list[1][1], 2)  # WORKING
+        self.assertEqual(prods_list[1][2], 'BLACK')  # WOKRING
+        self.assertEqual(prods_list[1][3], 539.98)  # WORKING
+
+        self.assertEqual(prods_list[2][0], "BOSE SOUNDLINK WIRELESS SPE...")  # WOKRING
+        self.assertEqual(prods_list[2][1], 3)  # WORKING
+        self.assertEqual(prods_list[2][2], 'BLUE')  # WORKING
+        self.assertEqual(prods_list[2][3], 387.0)  # WORKING
 
         # print(self.products.pop_up_info()[2][0], "NAME")
-        print(type(self.products.pop_up_info()[1][1]))
+        # print(type(self.products.pop_up_info()[1][1]))
         # print(self.products.pop_up_info()[2][2], "COLOR")
-        print(type(self.products.pop_up_info()[2][3]))
+        # print(type(self.products.pop_up_info()[2][3]))
 
     # def test_3(self):
     #     pass
@@ -103,7 +104,7 @@ class AOS_tests(unittest.TestCase):
     #         s.split(2)
 
     def tearDown(self):
-        # self.driver.close()
+        self.driver.close()
         pass
 
     if __name__ == '__main__':  # run all the unit test we defined

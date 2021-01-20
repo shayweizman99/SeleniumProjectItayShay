@@ -2526,24 +2526,27 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1611061218836	Marionette	INFO	Listening on port 64631
 1611061218879	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
-1611061290089	geckodriver	INFO	Listening on 127.0.0.1:64685
-1611061293188	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofileuCfcVh"
+1611139099903	Marionette	INFO	Stopped listening on port 64631
+1061293188	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofileuCfcVh"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
 1611061297049	Marionette	INFO	Listening on port 64693
 1611061297468	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
-1611061340371	geckodriver	INFO	Listening on 127.0.0.1:64740
-1611061343525	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofilehOZorh"
+1611139099901	Marionette	INFO	Stopped listening on port 64693
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+"--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofilehOZorh"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
 1611061347369	Marionette	INFO	Listening on port 64748
 1611061347754	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
-1611061987636	geckodriver	INFO	Listening on 127.0.0.1:53749
-1611061997551	geckodriver	INFO	Listening on 127.0.0.1:53759
+1611139100416	Marionette	INFO	Stopped listening on port 64748
+1061997551	geckodriver	INFO	Listening on 127.0.0.1:53759
 1611062000670	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofileRoait4"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
@@ -2551,16 +2554,17 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1611062004541	Marionette	INFO	Listening on port 53767
 1611062004881	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
-1611062065101	geckodriver	INFO	Listening on 127.0.0.1:53818
-1611062068246	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofilejLwrzP"
+[Parent 1132, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:166
+1611139099887	Marionette	INFO	Stopped listening on port 53767
+ground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofilejLwrzP"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
 1611062072727	Marionette	INFO	Listening on port 53826
 1611062073090	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
-1611062202960	geckodriver	INFO	Listening on 127.0.0.1:53892
-1611062206117	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofileOwVOMt"
+1611139100463	Marionette	INFO	Stopped listening on port 53826
+1062206117	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofileOwVOMt"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
@@ -2568,11 +2572,143 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1611062210343	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: https://www.advantageonlineshopping.com/vendor/requirejs/require.js, line 165: Error: Load timeout for modules: main.min
 http://requirejs.org/docs/errors.html#timeout
-1611062276925	geckodriver	INFO	Listening on 127.0.0.1:53960
-1611062280065	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofilejwN5YK"
+1611139100290	Marionette	INFO	Stopped listening on port 53900
+1062280065	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofilejwN5YK"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
 1611062283981	Marionette	INFO	Listening on port 53968
 1611062284279	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1611139100007	Marionette	INFO	Stopped listening on port 53968
+1064111296	geckodriver	INFO	Listening on 127.0.0.1:50456
+1611064114430	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofiletdS8k0"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 376))
+1611064118433	Marionette	INFO	Listening on port 50464
+1611064118650	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.advantageonlineshopping.com/vendor/requirejs/require.js, line 165: Error: Script error for "main.min"
+http://requirejs.org/docs/errors.html#scripterror
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1611064214644	Marionette	INFO	Stopped listening on port 50464
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1611064216537	geckodriver	INFO	Listening on 127.0.0.1:50527
+1611064219675	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofileSx6cTo"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611064223513	Marionette	INFO	Listening on port 50535
+1611064223911	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1611139100236	Marionette	INFO	Stopped listening on port 50535
+1611141012606	geckodriver	INFO	Listening on 127.0.0.1:57766
+1611141015712	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofileFUYHRc"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611141021956	Marionette	INFO	Listening on port 57774
+1611141022119	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1611141092097	Marionette	INFO	Stopped listening on port 57774
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1611141510041	geckodriver	INFO	Listening on 127.0.0.1:57836
+1611141512551	geckodriver	INFO	Listening on 127.0.0.1:57841
+1611141515624	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofileWV1D8d"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611141520425	Marionette	INFO	Listening on port 57849
+1611141520960	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1611141541528	Marionette	INFO	Stopped listening on port 57849
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\Racheli\AppData\Local\Temp\rust_mozprofileWV1D8d\protections.sqlite
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1611141553496	geckodriver	INFO	Listening on 127.0.0.1:57904
+1611141556567	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofileEvJwJ7"
+1611141561599	geckodriver	INFO	Listening on 127.0.0.1:57917
+1611141564661	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofileT7M8Xc"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611141569199	Marionette	INFO	Listening on port 57925
+1611141569526	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+1611142223263	Marionette	INFO	Stopped listening on port 57925
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+"--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofile89U4xs"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611141750133	Marionette	INFO	Listening on port 57996
+1611141750349	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+[Parent 20440, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:166
+1611142222984	Marionette	INFO	Stopped listening on port 57996
+ Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Racheli\\AppData\\Local\\Temp\\rust_mozprofileU61UpC"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611141833168	Marionette	INFO	Listening on port 58060
+1611141833551	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+  Stack:
+    timedFetch/<@resource://services-common/kinto-http-client.js:549:22
+timedFetch@resource://services-common/kinto-http-client.js:527:20
+request@resource://services-common/kinto-http-client.js:613:41
+execute@resource://services-common/kinto-http-client.js:2400:44
+_fetchChangeset@resource://services-settings/RemoteSettingsClient.jsm:1038:22
+_importChanges@resource://services-settings/RemoteSettingsClient.jsm:890:20
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:595:35
+observe@resource://gre/modules/AsyncShutdown.jsm:573:16
+
+console.warn: services.settings: main/pione1611142222873	Marionette	INFO	Stopped listening on port 58130
+services.settings: main/url-classifier-skip-urls sync interrupted by shutdown
+console.warn: services.settings: blocklists/gfx sync interrupted by shutdown
+console.warn: services.settings: main/hijack-blocklists sync interrupted by shutdown
+1611142222898	Marionette	INFO	Stopped listening on port 58060
+nKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611142013172	Marionette	INFO	Listening on port 58190
+1611142013685	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+[Parent 21072, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:166
+1611142222877	Marionette	INFO	Stopped listening on port 58190
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+t find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611142037752	Marionette	INFO	Listening on port 58244
+1611142038018	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1611142222879	Marionette	INFO	Stopped listening on port 58244
