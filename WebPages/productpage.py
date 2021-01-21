@@ -18,6 +18,8 @@ class Products():
                        'purple': "//span[@title = 'PURPLE' and @id = 'bunny']"
             , 'white': "//span[@title = 'WHITE']"}
         self.tablets_id = {1: "16", 2: "17", 3: "18"}
+        self.mice_id = {1: "29", 2: "28", 3: "27", 4: "30", 5: "33", 6: "32", 7:"26" , 8: "31", 9: "34"}
+
 
     def loader_wait(self):  # waits 15 until the loader to end
         WebDriverWait(self.driver, 15).until(EC.invisibility_of_element((By.XPATH, '//div[@class="loader"]')))
@@ -29,6 +31,10 @@ class Products():
     def choose_tablet(self, num):
         self.loader_wait()
         self.driver.find_element_by_id(self.tablets_id[num]).click()
+
+    def choose_mice(self,num):
+        self.loader_wait()
+        self.driver.find_element_by_id(self.mice_id[num]).click()
 
     def plus(self, num):
         self.loader_wait()
@@ -45,6 +51,12 @@ class Products():
     def change_color(self, color):
         self.loader_wait()
         self.driver.find_element_by_xpath(self.colors[color]).click()
+
+    def click_on_cart_icon(self):
+        self.loader_wait()
+        self.driver.find_element_by_id("shoppingCartLink").click()
+
+
 
     def pop_up_info(self):
         self.loader_wait()
@@ -72,3 +84,9 @@ class Products():
             product = [name, amount, color, price]
             products.append(product)
         return products
+
+    def locate_delete_btn(self):
+        return self.driver.find_element_by_css_selector("div[icon-x][class='removeProduct iconCss iconX']")
+
+    def remove_product(self):
+        self.locate_delete_btn().click()

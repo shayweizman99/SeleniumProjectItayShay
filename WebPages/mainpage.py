@@ -27,6 +27,13 @@ class MainPage():
         self.loader_wait()
         self.tablets().click()
 
+    def mice(self):
+        return self.driver.find_element_by_id("miceImg")
+
+    def click_mice(self):  # clicks speakers page element
+        self.loader_wait()
+        self.mice().click()
+
     def home_button(self):
         return self.driver.find_element_by_xpath("//a[@class='ng-scope']")
 
