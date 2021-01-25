@@ -18,8 +18,7 @@ class Products():
                        'purple': "//span[@title = 'PURPLE' and @id = 'bunny']"
             , 'white': "//span[@title = 'WHITE']"}
         self.tablets_id = {1: "16", 2: "17", 3: "18"}
-        self.mice_id = {1: "29", 2: "28", 3: "27", 4: "30", 5: "33", 6: "32", 7:"26" , 8: "31", 9: "34"}
-
+        self.mice_id = {1: "29", 2: "28", 3: "27", 4: "30", 5: "33", 6: "32", 7: "26", 8: "31", 9: "34"}
 
     def loader_wait(self):  # waits 15 until the loader to end
         WebDriverWait(self.driver, 15).until(EC.invisibility_of_element((By.XPATH, '//div[@class="loader"]')))
@@ -32,7 +31,7 @@ class Products():
         self.loader_wait()
         self.driver.find_element_by_id(self.tablets_id[num]).click()
 
-    def choose_mice(self,num):
+    def choose_mice(self, num):
         self.loader_wait()
         self.driver.find_element_by_id(self.mice_id[num]).click()
 
@@ -41,12 +40,12 @@ class Products():
         for times in range(num - 1):
             self.driver.find_element_by_css_selector("div[class='plus']").click()
 
-    def add_to_cart_btn(self):  # returns add to card button element
+    def locate_add_to_cart_button(self):  # returns add to card button element
         return self.driver.find_element_by_name("save_to_cart")
 
     def add_to_cart(self):
         self.loader_wait()
-        self.add_to_cart_btn().click()
+        self.locate_add_to_cart_button().click()
 
     def change_color(self, color):
         self.loader_wait()
@@ -55,8 +54,6 @@ class Products():
     def click_on_cart_icon(self):
         self.loader_wait()
         self.driver.find_element_by_id("shoppingCartLink").click()
-
-
 
     def pop_up_info(self):
         self.loader_wait()
@@ -90,3 +87,9 @@ class Products():
 
     def remove_product(self):
         self.locate_delete_btn().click()
+
+    def locate_tablets_text(self):  # used in test 7 to locate the page you are at
+        return self.driver.find_element_by_xpath("//div[3]/section/article/h3").text
+
+    def locate_specialoffer_text(self):  # used in test 7 to locate the page you are at
+        return self.driver.find_element_by_xpath("//*[@id='special_offer_items']/h3").text

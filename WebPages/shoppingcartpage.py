@@ -24,3 +24,15 @@ class ShoppingCart():
         presented_price = float(presented_price)
         return presented_price
 
+    def locate_checkout_button(self):
+        return self.driver.find_element_by_id("checkOutButton")
+
+    def click_checkout_button(self):
+        self.locate_checkout_button().click()
+
+    def locate_registration_button(self):
+        return self.driver.find_element_by_id('registration_btnundefined')
+
+    def click_register_button(self):
+        self.locate_registration_button().click()
+
