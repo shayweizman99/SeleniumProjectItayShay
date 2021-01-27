@@ -5,6 +5,7 @@ from WebPages.productpage import Products
 from WebPages.shoppingcartpage import ShoppingCart
 from WebPages.createaccountpage import CreateAccount
 from time import sleep
+from WebPages.orderspage import OrdersPage
 
 
 class AOS_tests(unittest.TestCase):
@@ -17,6 +18,7 @@ class AOS_tests(unittest.TestCase):
         self.products = Products(self.driver)
         self.shoppingcart = ShoppingCart(self.driver)
         self.createaccount = CreateAccount(self.driver)
+        self.orderspage = OrdersPage(self.driver)
         print("setup")
         self.driver.implicitly_wait(10)
         self.mainpage.loader_wait()
@@ -144,11 +146,47 @@ class AOS_tests(unittest.TestCase):
     #     cart_text = self.shoppingcart.locate_shoppingcart_text().text.replace('(', '').replace(')', '') #gets the shopping cart amount from the page and takes out ()
     #     self.assertIn(list_total_amount , cart_text)
     #     self.assertEqual(list_total_price , self.shoppingcart.locate_total_price()) #compare total prices
+    #-----------------------------------------------------------------------------------------
+    # def test_6(self):
+    #     # sleep(5)
+    #     self.mainpage.click_speakers()
+    #     # sleep(5)
+    #     self.products.choose_speaker(2)
+    #     # sleep(5)
+    #     self.products.add_to_cart()
+    #     self.mainpage.home_navigate()
+    #     self.mainpage.click_tablets()
+    #     self.products.choose_tablet(1)
+    #     self.products.add_to_cart()
+    #     self.products.click_on_cart_icon()
+    #     self.shoppingcart.click_edit_product2()[0] #אמור להקליק על אלמנט ראשון - מספר 0 כי בליסט בפייתון מתחילים מ0 - מתוך ה2 אלמנטים כי עשיתי בפונקציה פיינד ביי אלמנטס
+    #     self.shoppingcart.plus_1()
+    #     self.products.add_to_cart()  # אמור לעבוד, אם לא פשוט מוסיפים פה פונקציה חדשה שכותבים שלוחצת על הADD_TO_CART
+    #     self.products.click_on_cart_icon()
+    #     self.shoppingcart.click_edit_product2()[1]
+    #     self.shoppingcart.plus_1()
+    #     self.products.add_to_cart() #אמור לעבוד, אם לא פשוט מוסיפים פה פונקציה חדשה שכותבים שלוחצת על הADD_TO_CART
+    #     self.products.click_on_cart_icon()
+    #     first_quantity_to_check = self.shoppingcart.locate_QuantityOfProductInCart_text().the_first_quantity.text
+    #     second_quantity_to_check = self.shoppingcart.locate_QuantityOfProductInCart_text().the_second_quantity.text
+    #     self.assertEqual(first_quantity_to_check, "2")
+    #     self.assertEqual(second_quantity_to_check, "2")
     #
-    # def test_6(self): #שש ושבע הם טסטים קלים השארתי לך את 6
-    #     pass
+    #     # def test_6(self): #הדרך הפשוטה שבטוח עובדת
+    #     #     # sleep(5)
+    #     #     self.mainpage.click_speakers()
+    #     #     # sleep(5)
+    #     #     self.products.choose_speaker(2)
+    #     #     # sleep(5)
+    #     #     self.products.add_to_cart()
+    #     #     self.mainpage.home_navigate()
+    #     #     self.mainpage.click_tablets()
+    #     #     self.products.choose_tablet(1)
+    #     #     self.products.add_to_cart()
+    #     #     self.products.click_on_cart_icon()
+    #     #       self.shoppingcart.click_edit_product() #לשנות רק את הפונקציה לפיינד ביי אלמנט ולהוסיף את ה href="" מהאתר מהתכונות של האלמנט edit
     #
-    #
+    #--------------------------------------------------------------------------------------------
     # def test_7(self):
     #     self.mainpage.click_tablets()
     #     self.products.choose_tablet(1)
@@ -175,13 +213,27 @@ class AOS_tests(unittest.TestCase):
         self.products.click_on_cart_icon()
         self.shoppingcart.click_checkout_button()
         self.shoppingcart.click_register_button()
+        #creating a new account
         self.createaccount.enter_username('shayshy123')
         self.createaccount.enter_passwords('Shay123')
         self.createaccount.enter_email('Shay123@gmail.blayt')
-        # self.createaccount.enter_fullname('itay', 'zilberman')
-        # self.createaccount.enter_phone('5005050505')
-        sleep(4)
+        self.createaccount.enter_fullname('itay', 'zilberman')
+        self.createaccount.enter_phone('5005050505')
+        self.createaccount.enter_city('afula')
+        self.createaccount.enter_address('dvora 45')
+        self.createaccount.enter_state('IL')
+        self.createaccount.enter_postalcode('181818')
+        # self.createaccount.enter_country('israel')
+        self.createaccount.click_i_agree_and_register()
+        #finished creating an account
+        self.createaccount.order_payment_next_btn()
+        self.createaccount.safepay_username_and_password()
+        #move to shopping cart and check if empty
+        self.products.click_on_cart_icon()
+        cart_text = self.shoppingcart.shopping_cart_empty_text()
+        self.assertIn("Your shopping cart is empty" , cart_text) # test to make sure the cart is empty
 
+        sleep(10)
     def tearDown(self):
         # self.driver.close()
         print("teardown")
