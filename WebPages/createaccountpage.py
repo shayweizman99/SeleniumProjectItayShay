@@ -41,11 +41,13 @@ class CreateAccount():
     def enter_postalcode(self, postalcode):
         self.driver.find_element_by_name("postal_codeRegisterPage").send_keys(postalcode)
 
-    def enter_country(self , country):
+    def enter_country(self , country_value):
         # self.driver.find_element_by_name("countryListboxRegisterPage").send_keys(country).send_keys(Keys.ENTER)
-        country_dropdown = Select(self.driver.find_element_by_css_selector("select[name='countryListboxRegisterPage']"))
+        country_dropdown = self.driver.find_element_by_css_selector("select[name='countryListboxRegisterPage']")
+        select_country = Select(country_dropdown)
+        select_country.select_by_visible_text(country_value)
         # country_dropdown.select_by_visible_text(country)
-        country_dropdown.select_by_value('1')
+        # country_dropdown.select_by_value('1')
 
     def click_i_agree_and_register(self):
         self.driver.find_element_by_css_selector("input[name='i_agree']").click()

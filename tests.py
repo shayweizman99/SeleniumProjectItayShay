@@ -223,7 +223,7 @@ class AOS_tests(unittest.TestCase):
         self.createaccount.enter_address('dvora 45')
         self.createaccount.enter_state('IL')
         self.createaccount.enter_postalcode('181818')
-        # self.createaccount.enter_country('israel')
+        self.createaccount.enter_country('israel')
         self.createaccount.click_i_agree_and_register()
         #finished creating an account
         self.createaccount.order_payment_next_btn()
